@@ -1,0 +1,63 @@
+# SkyMasters General Configuration
+
+# Minimum players required to start the countdown.
+min-players-to-start: 2
+
+# Maximum players allowed in an arena.
+max-players-per-arena: 12
+
+# Countdown time in seconds before the game starts after reaching min players.
+lobby-countdown-seconds: 15
+
+# Time in seconds before chests are refilled (0 to disable first refill).
+chest-refill-time-seconds: 180
+
+# Time in seconds before the second chest refill (0 to disable second refill).
+chest-refill-time-seconds-2: 120
+
+# Time in seconds the game lasts before ending in a draw (0 for infinite).
+game-time-limit-seconds: 600 # 10 minutes
+
+# Time in seconds players have invincibility after the game starts.
+start-invincibility-seconds: 5
+
+# Time in seconds before the arena automatically regenerates and returns to lobby after game ends.
+end-game-delay-seconds: 10
+
+# Item used for the setup wand. Use Material names from Bukkit API.
+# Example: BLAZE_ROD, STICK, GOLDEN_AXE
+setup-wand-item: BLAZE_ROD
+
+# Set to true to automatically equip kits on joining the arena lobby.
+auto-equip-default-kit: false
+default-kit-name: "default" # Name of the kit to equip if auto-equip-default-kit is true.
+
+# Enable or disable specific game events
+enable-hunger-loss: true
+enable-natural-mob-spawning: false # Prevent mobs spawning naturally in arenas
+enable-fall-damage: true
+
+# Regeneration Settings
+# WARNING: Full regeneration can be resource-intensive without schematic tools.
+# 'FULL' attempts to save and restore all blocks. (Can cause lag/large files)
+# 'PARTIAL' only removes player-placed blocks (configurable list below) and refills chests. (Less accurate but faster)
+regeneration-mode: PARTIAL # Options: FULL, PARTIAL, NONE
+# List of materials considered 'player placed' for PARTIAL regeneration.
+player-placed-blocks-for-partial-regen:
+  - OAK_PLANKS
+  - COBBLESTONE
+  - DIRT
+  - OAK_LOG
+  - GLASS
+  - WHITE_WOOL # Add other common building blocks players might use
+
+# Spectator Settings
+allow-spectators: true
+spectator-speed: 0.2 # Default walk speed for spectators
+spectator-night-vision: true
+
+# Titles and Action Bar settings
+show-countdown-title: true
+show-start-title: true
+show-winner-title: true
+show-action-bar-messages: true # Shows game state, player counts, etc. in action bar

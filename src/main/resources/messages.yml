@@ -1,0 +1,153 @@
+prefix: "&b&lSkyMasters &8»&r "
+
+# General Messages
+no-permission: "&cYou do not have permission to use this command."
+player-only-command: "&cThis command can only be run by a player."
+invalid-arguments: "&cInvalid arguments. Usage: {usage}"
+arena-not-found: "&cCould not find an arena named '{arena}'."
+arena-not-ready: "&cThe arena '{arena}' is not ready yet (Regenerating or Disabled)."
+arena-full: "&cThe arena '{arena}' is full."
+arena-in-game: "&cThe arena '{arena}' is already in game."
+kit-not-found: "&cCould not find a kit named '{kit}'."
+no-kit-permission: "&cYou don't have permission to use the kit '{kit}'."
+no-available-arenas: "&cNo available arenas found to join."
+cannot-spectate: "&cCould not join arena '{arena}' as spectator."
+not-in-arena: "&cYou are not in an arena."
+arena-list-header: "&b--- Available Arenas ---"
+no-enabled-arenas: "&cNo arenas are currently enabled or set up."
+arena-not-fully-setup: "&cCannot enable arena '{arena}', it is not fully configured!"
+arena-already-enabled: "&eArena '{arena}' is already enabled."
+arena-already-disabled: "&eArena '{arena}' is already disabled."
+arena-already-exists: "&cAn arena with the name '{arena}' already exists."
+arena-created-for-setup: "&aArena '{arena}' created. Use '/sw setup {arena}' to configure it."
+cannot-delete-while-setup: "&cYou cannot delete an arena while setting it up. Use '/sw cancelsetup' first."
+arena-deleted: "&aArena '{arena}' and its configuration have been deleted."
+cannot-forcestart-state: "&cCannot force start arena '{arena}', it's not in the waiting or starting phase."
+cannot-forcestart-empty: "&cCannot force start arena '{arena}' with zero players."
+cannot-forcestop-state: "&cCannot force stop arena '{arena}', it's not actively running a game."
+cannot-modify-arena: "&cYou cannot modify blocks inside an active Skywars arena."
+reload-start: "&eReloading SkyMasters configuration, messages, kits, and arenas..."
+reload-complete: "&aConfiguration and arenas reloaded."
+
+# Join/Leave Messages
+join-arena: "&aYou have joined arena '{arena}'. Waiting for players... ({current}/{max})"
+join-arena-broadcast: "&e{player} &ahas joined the arena! ({current}/{max})"
+leave-arena: "&cYou have left the arena '{arena}'."
+leave-arena-broadcast: "&e{player} &chas left the arena! ({current}/{max})"
+already-in-arena: "&cYou are already in an arena."
+
+# Game State Messages
+countdown-starting: "&aMinimum players reached! Starting countdown..."
+countdown-tick: "&eGame starting in &b{time} &eseconds..."
+countdown-cancelled: "&cCountdown cancelled. Not enough players."
+game-starting: "&bThe game has started! Good luck!"
+invincibility-start: "&eYou have invincibility for &b{time} &eseconds!"
+invincibility-end: "&cInvincibility has worn off!"
+chest-refill-soon: "&eChests will be refilled in &b{time} &eseconds!"
+chest-refilled: "&aChests have been refilled!"
+player-eliminated: "&e{player} &7was eliminated."
+player-eliminated-by-player: "&e{victim} &7was slain by &e{killer}&7."
+player-left-game: "&e{player} &7left the game."
+game-won: "&a&l{player} &ahas won the game on arena '{arena}'!"
+game-draw: "&eThe game ended in a draw! Nobody won. (Arena: {arena})"
+arena-regenerating: "&7Arena '{arena}' is regenerating..."
+arena-ready: "&aArena '{arena}' is now available to join!"
+waiting-for-players: "&7Waiting for players... Need {needed} more." # Used by action bar now
+
+# Kit Messages
+kit-selected: "&aYou have selected the kit '{kit}'."
+kit-received: "&aYou received the kit '{kit}'."
+kit-created: "&aSuccessfully created kit '{kit}'."
+kit-deleted: "&aSuccessfully deleted kit '{kit}'."
+kit-list-header: "&b--- Available Kits ---"
+kit-list-item-available: "&e- {kit}"
+kit-list-item-noperm: "&c- {kit} (No Permission)" # Use this if showing unavailable kits
+kit-already-exists: "&cKit '{kit}' already exists."
+kit-select-gui-title: "Select a Kit"
+kit-none-available: "&cThere are no kits available for you."
+kit-select-wrong-state: "&cYou can only select kits while in the lobby or during countdown."
+kit-name-numeric: "&cKit names cannot be purely numeric."
+kit-create-empty-inventory: "&cYour inventory and armor slots must contain items to create a kit."
+kit-create-failed: "&cFailed to create kit '{kit}'."
+kit-delete-failed: "&cFailed to delete kit '{kit}'."
+
+# Setup Wizard Messages
+setup-wand-give: "&aYou received the setup wand. Left-click=Pos1, Right-click=Pos2, Right-click Chest=Toggle Chest."
+setup-mode-enter: "&eEntered setup mode for arena '{arena}'. Use the wand or commands (/sw help)."
+setup-mode-exit: "&eExited setup mode for arena '{arena}'."
+setup-pos1-set: "&aPosition 1 set."
+setup-pos2-set: "&aPosition 2 set."
+setup-bounds-defined: "&aArena boundaries defined."
+setup-spawn-added: "&aPlayer spawn point #{index} added at your location."
+setup-chest-added: "&aChest added at the target block. Total: {count}"
+setup-chest-removed: "&aChest removed at the target block. Total: {count}"
+setup-lobby-set: "&aLobby spawn point set at your location."
+setup-spectator-spawn-set: "&aSpectator spawn point set at your location."
+setup-center-set: "&aCenter location set at your location."
+setup-not-in-setup-mode: "&cYou are not in setup mode. Use /skywars setup <arena>."
+setup-already-in-mode: "&cYou are already in setup mode. Use /sw finishsetup or /sw cancelsetup."
+setup-invalid-block-chest: "&cYou must right-click a chest block with the wand to add/remove it."
+setup-finish-incomplete: "&cCannot finish setup. Missing: {missing}."
+setup-finish-confirm: "&aArena '{arena}' configuration seems complete. Saving..."
+setup-finish-success: "&aArena '{arena}' saved successfully! Enable it with /skywars enable {arena}."
+setup-bounds-required: "&cSet the arena boundaries first using the wand." # No longer used in check msg
+setup-needs-spawns: "&cAdd at least {min} spawn points ({current} currently)." # No longer used in check msg
+setup-lobby-required: "&cSet the lobby spawn point (/sw setlobby)." # No longer used in check msg
+setup-spectator-spawn-required: "&cSet the spectator spawn point (/sw setspectatorspawn)." # No longer used in check msg
+setup-use-wand-for-chest: "&eUse the setup wand and right-click a chest block to add/remove it."
+# Specific messages for completeness check
+setup-missing-bounds: "Bounds (Pos1 & Pos2)"
+setup-missing-spawns: "{min} Player Spawns ({current} set)"
+setup-missing-lobby: "Lobby Spawn"
+setup-missing-spectator: "Spectator Spawn"
+# Other Admin Creation/Deletion messages moved to general section
+
+# Spectator Messages
+now-spectating: "&7You are now spectating '{arena}'."
+stop-spectating: "&7You are no longer spectating '{arena}'."
+cannot-interact-spectator: "&cSpectators cannot interact with the world."
+spectator-teleport-gui-title: "Teleport to Player"
+cannot-spectate-disabled: "&cSpectating is disabled for this arena."
+cannot-spectate-playing: "&cYou cannot spectate while playing in the arena."
+
+# Admin Messages
+arena-enabled: "&aArena '{arena}' has been enabled."
+arena-disabled: "&aArena '{arena}' has been disabled."
+arena-creation-failed: "&cFailed to create the arena configuration file."
+arena-reloaded: "&aConfiguration and arenas reloaded." # Merged reload messages
+force-start: "&eForce starting arena '{arena}'..."
+force-stop: "&eForce stopping arena '{arena}'..."
+
+# Help Messages (Split for clarity)
+help-header: "&b--- SkyMasters Help ---"
+help-join: "&e/sw join [arena] &7- Join an available arena."
+help-leave: "&e/sw leave &7- Leave your current arena."
+help-list: "&e/sw list &7- List available arenas."
+help-kit-list: "&e/kit list &7- List available kits."
+help-kit-select: "&e/kit select <kit> &7- Select a kit (in lobby)."
+help-admin-header: "&c--- Admin Commands ---"
+help-create: "&c/sw create <arena> &7- Create a new arena config file."
+help-delete: "&c/sw delete <arena> &7- Delete an arena and its config."
+help-setup: "&c/sw setup <arena> &7- Enter setup mode for an arena."
+help-addspawn: "&c/sw addspawn &7- (Setup Mode) Add a player spawn point."
+help-setlobby: "&c/sw setlobby &7- (Setup Mode) Set the waiting lobby spawn."
+help-setspectatorspawn: "&c/sw setspectatorspawn &7- (Setup Mode) Set the spectator spawn."
+help-setcenter: "&c/sw setcenter &7- (Setup Mode) Set the arena center point."
+help-wand-chest-info: "&7   (&eUse Wand Right-Click on Chest to add/remove it&7)" # Wand info
+help-finishsetup: "&c/sw finishsetup &7- (Setup Mode) Save and exit setup mode."
+help-cancelsetup: "&c/sw cancelsetup &7- (Setup Mode) Exit without saving changes."
+help-enable: "&c/sw enable <arena> &7- Enable a configured arena."
+help-disable: "&c/sw disable <arena> &7- Disable an arena."
+help-forcestart: "&c/sw forcestart <arena> &7- Force start an arena."
+help-forcestop: "&c/sw forcestop <arena> &7- Force stop an arena."
+help-reload: "&c/sw reload &7- Reload all configurations."
+help-kit-create: "&c/kit create <name> &7- Create a kit from your inventory."
+help-kit-delete: "&c/kit delete <name> &7- Delete a kit."
+
+# Action Bar Messages
+actionbar-waiting: "&aWaiting... {current}/{max} &7| Need &b{needed} &7more!"
+actionbar-starting: "&eStarting in &b{time}s... &7| Arena: &f{arena}"
+actionbar-ingame: "&bPlayers: &f{players} &7| &eTime: &f{time} &7| Arena: &f{arena}" # Add {next_event} later maybe
+actionbar-ending: "&6Game Over! &7| Arena: &f{arena}"
+actionbar-regenerating: "&dRegenerating... &7| Arena: &f{arena}"
+actionbar-disabled: "&cDisabled &7| Arena: &f{arena}"

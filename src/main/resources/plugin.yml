@@ -1,0 +1,25 @@
+name: SkyMasters
+version: 1.0.0
+main: com.codella.skymasters.SkyMasters
+api-version: 1.19 # Target API version
+author: Codella
+description: A comprehensive Skywars plugin supporting multiple arenas, custom kits, and easy setup.
+commands:
+  skywars:
+    description: Main command for SkyMasters plugin.
+    aliases: [sw]
+    usage: /skywars <subcommand> [args...]
+  kit:
+    description: Manage Skywars kits.
+    aliases: [kits]
+    usage: /kit <subcommand> [args...]
+permissions:
+  skymasters.admin:
+    description: Allows access to admin commands like setup and kit creation.
+    default: op
+  skymasters.kit.*:
+    description: Allows access to all kits.
+    default: op
+  skymasters.kit.<kitname>: # Dynamically used
+    description: Allows access to a specific kit.
+    default: false
